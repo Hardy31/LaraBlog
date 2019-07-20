@@ -88,7 +88,7 @@
                     <a href="/">___</a>
                     <a href="/home">ДОМ</a>
                     <a href="/posts">Posts</a>
-                    <a href="/post">Post</a>
+                    <a href="/post/1">Post</a>
                     <a href="/creat">Creat Post</a>
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>

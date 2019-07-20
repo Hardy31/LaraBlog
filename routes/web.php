@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,50 +14,15 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PostController@index');
+Route::get('/home', "PostController@home");
+Route::get('/posts', "PostController@posts" );
+Route::get('/post/{id} ', "PostController@post");
+Route::get('/creat', "PostController@creat");
+Route::post('/store', "PostController@store");
+Route::get('/edit/{id} ', "PostController@edit");
+Route::post('/update/{id}',"PostController@update");
+Route::get('/delit/{id}', "PostController@delit");
 
-Route::get('/home', function () {
-    return view('home');
-});
 
-Route::get('/posts', function () {
 
-        $posts = DB::table("post")->select("*")->get();
-
-          //$myArrayPosts = $posts->all();
-          //dd($myArrayPosts[3]);
-          //$d = $myArrayPosts[3];
-          //dd($d['title']);
-    //dd($posts);
-        //dd($myArrayPosts);
-        return view('posts', ['posts' => $posts]);
-});
-
-Route::get('/post', function () {
-    return view('post');
-});
-
-Route::get('/creat', function () {
-    return view('creat');
-});
-Route::post('/store', function (Request $request) {
-    $post = $request->all();
-
-   $image = $request->file('image');
-
-    $fileImage = $request->image->store('uploads');
-
-     DB::table('post')->insert(
-        [
-
-            'picture' => $fileImage,
-            'title' => $post['title'],
-            'content'  => $post['content'],
-
-        ]
-
-    );
-    return redirect('/');
-});

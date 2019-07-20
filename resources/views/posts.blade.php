@@ -17,7 +17,10 @@
 
                             <article class="single-blog">
                                 <div class="post-thumb">
+                                    <div class="post-thumb">
+                                        <a href="#"><img src="../../public/app/{{$post->picture}}" alt=""></a>
 
+                                    </div>
                                 </div>
                                 <div class="post-content">
                                     <div class="entry-header text-center text-uppercase">
@@ -37,9 +40,9 @@
 
 
 
-
-                                        <a href="single-page.html">Редактировать статью</a>
-                                        <a href="./../../deletepost/{{$post->id}}">Удалить статью</a>
+                                        <a href="/post/{{$post->id}}">Читать</a>
+                                        <a href="/edit/{{$post->id}}">Редактировать статью</a>
+                                        <a href="/delit/{{$post->id}}">Удалить статью</a>
 
                                         <a href="../../../comment/creat/{{$post->id}}">Новый комментарий</a>
 
