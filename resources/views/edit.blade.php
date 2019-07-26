@@ -14,7 +14,9 @@
         {{csrf_field()}}
 
         <label for="inputEmail" class="sr-only">Название</label>
-        <input type="text" name="title"  size="30" maxlength="30"  value={{$post->title}} />
+
+        {{$post->title}}
+        <input type="text" name="title"  value="{{$post->title}}" >
 
 
         <label for="inputEmail" class="sr-only">Содержание</label>

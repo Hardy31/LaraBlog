@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Storage;
 */
 
 Route::get('/', 'PostController@index');
+Route::get('/1', 'PostController@admin');
 Route::get('/home', "PostController@home");
 Route::get('/posts', "PostController@posts" );
 Route::get('/post/{id} ', "PostController@post");
@@ -26,3 +27,7 @@ Route::get('/delit/{id}', "PostController@delit");
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
