@@ -18,7 +18,7 @@
                             <article class="single-blog">
                                 <div class="post-thumb">
                                     <div class="post-thumb">
-                                        <a href="#"><img src="../../public/app/{{$post->picture}}" alt=""></a>
+                                        <a href="#"><img src="../../public/app/uploads/1XA9lZzBQaJ4zUpJHOuGpFIqSnvE4UvPlF1TRQR4.jpeg" alt=""></a>
 
                                     </div>
                                 </div>

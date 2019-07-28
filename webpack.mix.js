@@ -11,29 +11,46 @@ const mix = require('laravel-mix');
  |
  */
 
-//mix.js('resources/js/app.js', 'public/js')
- //   .sass('resources/sass/app.scss', 'public/css');
 
 mix.styles([
-    'resources/admin/assets/css/bootstrap.min.css',
-    'resources/admin/assets/css/font-awesome.min.css',
-    'resources/admin/assets/css/ionicons.min.css',
-    'resources/admin/assets/css/dataTables.bootstrap.min.css',
-    'resources/admin/assets/css/ionicons.min.css',
-    'resources/admin/assets/css/AdminLTE.min.css',
-    'resources/admin/assets/css/skin-purple.min.css'
+    'resources/assets/admin/bootstrap/css/bootstrap.min.css',
+    'resources/assets/admin/font-awesome/4.5.0/css/font-awesome.min.css',
+    'resources/assets/admin/ionicons/2.0.1/css/ionicons.min.css',
+    'resources/assets/admin/dist/css/AdminLTE.min.css.css',
+    'resources/assets/admin/dist/css/skins/_all-skins.min.css'
 ], 'public/css/admin.css');
 
-mix.script([
-    'resources/admin/assets/js/jquery.min.js',
-    'resources/admin/assets/js/bootstrap.min.js',
-    'resources/admin/assets/js/jquery.dataTables.min.js',
-    'resources/admin/assets/js/dataTables.bootstrap.min.js',
-    'resources/admin/assets/js/adminlte.min.js',
-    'resources/admin/assets/js/select2.fuull.min.js'
+mix.scripts([
+    'resources/assets/admin/plugins/jQuery/jquery-2.2.3.min.js',
+    'resources/assets/admin/bootstrap/js/bootstrap.min.js',
+    'resources/assets/admin/plugins/slimScroll/jquery.slimscroll.min.js',
+    'resources/assets/admin/plugins/fastclick/fastclick.js',
+    'resources/assets/admin/dist/js/app.min.js',
+    'resources/assets/admin/dist/js/demo.js'
 ], 'public/js/admin.js');
 
 
+mix.styles([
+    'resources/assets/post/css/bootstrap.min.css',
+    'resources/assets/post/css/font-awesome.min.css',
+    'resources/assets/post/slick-theme.css',
+    'resources/assets/post/slick.css'
+
+], 'public/css/post.css');
+
+mix.scripts([
+    'resources/assets/post/slick.min.js',
+    'resources/assets/admin/bootstrap/js/bootstrap.min.js',
+    'resources/assets/post/respond.js',
+    'resources/assets/post/main.js',
+    'resources/assets/post/jquery-1.12.4.min.js',
+    'resources/assets/post/html5shiv.js'
+
+], 'public/js/post.js');
+
+
+mix.copy('resources/assets/post/fonts', 'public/fonts');
+mix.copy('resources/assets/admin/dist/fonts', 'public/fonts');
 
 
 

@@ -17,7 +17,6 @@
                         <div class="post-thumb">
                             <div class="post-thumb">
 
-                                <a href="#"><img src="../../public/app/{{$post->picture}}" alt=""></a>
                             </div>
                         </div>
                         <div class="post-content">

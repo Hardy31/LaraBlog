@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Storage;
 */
 
 Route::get('/', 'PostController@index');
-Route::get('/1', 'PostController@admin');
+
+
 Route::get('/home', "PostController@home");
 Route::get('/posts', "PostController@posts" );
 Route::get('/post/{id} ', "PostController@post");
@@ -24,6 +25,10 @@ Route::post('/store', "PostController@store");
 Route::get('/edit/{id} ', "PostController@edit");
 Route::post('/update/{id}',"PostController@update");
 Route::get('/delit/{id}', "PostController@delit");
+
+
+Route::get('/1', 'admin\CategoriesController@index');
+Route::resource('/admin/category ', 'admin\CategoryController');
 
 
 

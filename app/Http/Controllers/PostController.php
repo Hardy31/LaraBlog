@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Services\PostService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -27,9 +28,12 @@ class PostController extends Controller
 
 
     function posts() {
+
         $posts = new PostService();
-        //dd($posts);
+        //dd($posts->getAll());
         return view('posts', ['posts' => $this->posts->getAll()]);
+
+
     }
 
     function creat() {
